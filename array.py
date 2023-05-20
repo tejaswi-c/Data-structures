@@ -174,5 +174,41 @@ Code:
 	print(n)
 
 Timecomplexity:O(n**2)
-Space Spacecomplexity:O(1)
+Spacecomplexity:O(1)
+	
+6.Find Minimum Number of Merge Operations to Make an Array Palindrome
+Approach:Two pointer
+	-initialize left and right
+	-merge_cnt=0
+	-traverse
+	-if element at left pointer==element at right pointer
+	-inc left dec right
+	-if element at left<element at right
+	-arr[left+1]=arr[left] inc left inc merge_cnt
+ 	-else arr[right-1]+=arr[right] dec right inc merge_cnt
+Code:
+	 def merge(nums):
+		n=len(nums)
+		left=0
+		right=n-1
+		merge_cnt=0
+		while left<=right:
+			if nums[left]==nums[right]:
+				left+=1
+				right-=1
+			elif nums[left]<nums[right]:
+				nums[left+1]=nums[left]
+				left+=1
+				merge_cnt+=1
+			else:
+				nums[right-1]+=nums[right]
+				right-=1
+				merge_cnt+=1
+		return merge_cnt
+	 nums=[2, 7, 6, 1, 6, 5, 7, 2]
+	 x=merge(nums)
+	 print(x)
+ Timecomplexity:O(n)
+ Spacecomplexity:O(1)
+
 
