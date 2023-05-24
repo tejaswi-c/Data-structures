@@ -63,9 +63,11 @@ Approach:
     -s=represents shift of pattern
     -while loop continues until pattern is fully searched
     -If the loop terminates with j becoming -1, it means that the pattern is present at the current shift s
-    -We shift the pattern so that the next character in the text aligns with the last occurrence of it in the pattern. If the pattern occurs at the end of the text, we shift by 1 to continue the search.
+    -We shift the pattern so that the next character in the text aligns with the last occurrence of it in the pattern. 
+     If the pattern occurs at the end of the text, we shift by 1 to continue the search.
     -If the loop terminates with j not becoming -1, it means there was a mismatch between the pattern and the text at the current shift.
-    -We shift the pattern so that the bad character in the text aligns with the last occurrence of it in the pattern. The max function ensures that we get a positive shift.
+    -We shift the pattern so that the bad character in the text aligns with the last occurrence of it in the pattern.
+     The max function ensures that we get a positive shift.
 Code:
     def bad_char(string,size):
         badchar=[-1]*256
@@ -110,7 +112,8 @@ Approach:
 -The next two loops calculate the hash values of the pattern (p) and the first window of the text (t).
 -rabin-karp rolling hash function is used
 -if the pattern is found at the current index i,print
--After the comparison, the hash value of the next window in the text is calculated by subtracting the contribution of the first character in the current window and adding the contribution of the next character (txt[i+m]). This is done using the rolling hash technique.
+-After the comparison, the hash value of the next window in the text is calculated by subtracting the contribution of the first character in the current window
+ and adding the contribution of the next character (txt[i+m]). This is done using the rolling hash technique.
 -If the resulting hash value (t) becomes negative, it is adjusted to a positive value by adding q.
 Code:
 d=256
