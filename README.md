@@ -39,4 +39,4 @@ Merge Sort: This algorithm divides the array into two halves, recursively sorts 
 
 Quick Sort: This algorithm selects an element as a pivot, partitions the array around the pivot, and recursively sorts the sub-arrays on either side of the pivot.
 
-Radix sort is that sorting is performed from the least significant digit to the most significant digit, creating a chain of sorted sublists. Each subsequent sorting operation takes into account the ordering established by the previous digits.
+Radix sort:This algorithm is sorting is performed from the least significant digit to the most significant digit, creating a chain of sorted sublists. Each subsequent sorting operation takes into account the ordering established by the previous digits.
