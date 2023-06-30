@@ -113,7 +113,7 @@ def total_setbits(n):
     return count
 TC:O(n^2)
 
-App:Optimized 
+App:Optimized approach
 -initialize total_count=0
 -initialize i to 1
 -enter while i<=n
