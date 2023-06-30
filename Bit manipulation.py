@@ -43,6 +43,7 @@ output=6
 7^2=5
 5^3=6
 
+
 3.Program to find whether a no is power of two
 def is_power_of_two(num):
 	return n>0 and (n&(n-1))==0
@@ -85,6 +86,7 @@ Ex:
 10010-right shift
 1001-return-1
 
+
 5.Count number of bits to be flipped to convert A to B
 -find xor of a and b
 def countBitsFlip(a,b):
@@ -99,6 +101,7 @@ A=1010=10
 B=10100=20
 C=A^B =11110=30
 output=4
+
 
 6.Count total set bits in all numbers from 1 to n
 App:
@@ -136,7 +139,26 @@ def countsetbits_1_to_n(n):
             total_count += remainder - i + 1
         i <<= 1  
     return total_count
-7.
+
+
+7.Copy set bits in a range
+
+App:
+1.Create a mask with set bits in the specified range
+2.Extract the bits from the source number using the mask
+3.Clear the corresponding bits in the destination number
+4.Set the extracted bits in the destination number
+
+def copy(source,destination,start,end):
+	mask=((1<<(end-start+1))-1)<<start
+	extracted_bits=source&mask
+	cleared_destination=destination&~mask
+	result=cleared_destination|extracted_bits
+	return result
+TC:O(1)
+SC:O(1)
+
+
 8.Calculate square of a number without using *, / and pow()
 App1:repeated addition
 def square_number(n):
@@ -168,6 +190,7 @@ def square_number(n):
 		return 4*half+(n//2)+(n//2)+1
 TC:O(logn)
 SC:O(logn)
+
 
 9.
 10.Power Set
