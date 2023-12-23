@@ -5,6 +5,7 @@ DS-Arrays,Strings,HashMaps
 1.Maximum Average Subarray
 2.Sliding window maximum  
 3.Number of subarrays of size k and average>=threshold
+4.check if a string contains all binary codes of size check
 
 
 
@@ -53,3 +54,18 @@ def num_of_subarrays(arr,k,threshold):
 	if window_sum/k>=threshold:
 		count+=1
 	return count
+
+
+
+4.check if a string contains all binary codes of size check
+
+def contain_binary(s,k):
+	n=len(s)
+	total_codes=2**k 
+	seen_codes=set()
+    for i in range(n-k+1):
+    	code=s[i:i+k]
+    	seen_codes.add(code)
+    	if len(seen_codes)==total_codes:
+    		return True
+    return False
