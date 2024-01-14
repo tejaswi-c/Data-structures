@@ -84,7 +84,7 @@ Algorithm:
  -loop:
     if element of first array is greater then add it to first array
     else add it to the next array.
-
+-add remaining elements in the second array
 def merge(self, nums1, m, nums2, n):
         p1=m-1
         p2=n-1
