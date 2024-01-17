@@ -102,3 +102,26 @@ def merge(self, nums1, m, nums2, n):
 
 
 
+
+
+Leetcode top Interview 150
+2.Remove elements
+                                            
+Algorithm      
+-traverse 
+-when k is encountered inc count ,replace occurance  of val
+-remove the val elements at the end of the list
+                                       
+def removeElement(self, nums, val):
+        count=0
+        for i in range(len(nums)):
+            if nums[i]==val:
+                count+=1
+            else:
+                nums[i-count]=nums[i]
+
+                
+        nums=nums[:-count]
+        return len(nums)
+
+
