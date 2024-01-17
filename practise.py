@@ -107,21 +107,21 @@ def merge(self, nums1, m, nums2, n):
 Leetcode top Interview 150
 2.Remove elements
                                             
-Algorithm      
+Algorithm 
+-count value s                                           
 -traverse 
--when k is encountered inc count ,replace occurance  of val
--remove the val elements at the end of the list
+-remove first occurance of val
                                        
 def removeElement(self, nums, val):
-        count=0
-        for i in range(len(nums)):
-            if nums[i]==val:
-                count+=1
-            else:
-                nums[i-count]=nums[i]
-
-                
-        nums=nums[:-count]
+         s=nums.count(val)
+        for i in range(s):
+            nums.remove(val)
+                    
+       
         return len(nums)
+
+
+
+
 
 
