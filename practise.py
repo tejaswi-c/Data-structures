@@ -135,6 +135,9 @@ def removeElement(self, nums, val):
         return len(nums)-duplicates
                                            
 
+
+
+
 4.Remove duplicates from sorted array-II
  def removeDuplicates(self, nums):
         """
