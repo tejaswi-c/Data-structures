@@ -125,10 +125,7 @@ def removeElement(self, nums, val):
 
 3.Remove duplicates from the sorted array
  def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    
         duplicates=0
         for i in range(1,len(nums)):
             if nums[i]==nums[i-1]:
@@ -137,4 +134,19 @@ def removeElement(self, nums, val):
                 nums[i-duplicates]=nums[i]
         return len(nums)-duplicates
                                            
+
+4.Remove duplicates from sorted array-II
+ def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        k = 0
+        # Traverse all elements through loop...
+        for i in nums:
+            # If the index does not match elements, count that element and update it...
+            if k < 2 or i != nums[k - 2]:
+                nums[k] = i
+                k += 1
+        return k   
 
