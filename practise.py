@@ -153,3 +153,17 @@ def removeElement(self, nums, val):
                 k += 1
         return k   
 
+
+5.Rotate array 
+def rotate(nums, k):
+        n = len(nums)
+        k = k % n
+        def reverse(s,e):
+            while s<e:
+                nums[s],nums[e]=nums[e],nums[s]
+                s+=1
+                e-=1
+        reverse(0,n-1)  #complete rotate
+        reverse(0,k-1)  #first part rotate
+        reverse(k,n-1)  #second part rotate 
+        
