@@ -166,4 +166,15 @@ def rotate(nums, k):
         reverse(0,n-1)  #complete rotate
         reverse(0,k-1)  #first part rotate
         reverse(k,n-1)  #second part rotate 
-        
+
+
+6.Best time to buy and sell stocks
+def maxProfit(self,prices):
+	mini=float('inf')
+	profit=0
+	for i in prices:
+		if i<mini:
+			mini=i
+		elif i-mini>profit:
+			profit=i-mini
+	return profit
