@@ -178,3 +178,37 @@ def maxProfit(self,prices):
 		elif i-mini>profit:
 			profit=i-mini
 	return profit
+
+
+7.Best time to buy and sell stocks II
+def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        maxprofit=0
+        for i in range(1,len(prices)):
+            if prices[i]>prices[i-1]:
+                maxprofit+=prices[i]-prices[i-1]
+        return maxprofit
+8.Jump game
+def canJump(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        furthest=0
+        for i in range(len(nums)):
+            if i>furthest:
+                return False
+            furthest=max(furthest,i+nums[i])
+            if furthest>=len(nums)-1:
+                return True 
+        return False 
+Algorithm            
+#initialize the variable
+#traverse array
+#if the current index is greater than i 
+#update the furthest with max value in previous value or i+nums[i]
+#if furthest>=len(nums)-1 then return true
+#else return false
