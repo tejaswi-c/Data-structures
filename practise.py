@@ -212,3 +212,32 @@ Algorithm
 #update the furthest with max value in previous value or i+nums[i]
 #if furthest>=len(nums)-1 then return true
 #else return false
+
+
+
+
+9.
+Approach-1:Greedy Algorithm 
+1.Initialize two pointers-current max reach and next max reach 
+2.iterate through the array 
+3.current_max_reach-farthest index you can reach with current number of jumps
+  next_max_reach-farthest index you can reach with an additional jump
+4.current_max_reach 
+5.continue till you reach the last index 
+
+
+
+def jump(nums):
+    n=len(nums)
+    if n==1:
+    	return 0
+    jumps=0
+    current_max_reach=nums[0]
+    next_max_reach=nums[0]
+    for i in range(1,n):
+    if i>current_max_reach:
+    	jumps+=1
+    	current_max_reach=next_max_reach
+    next_max_reach=max(next_max_reach,i+nums[i])
+    return jumps 
+
