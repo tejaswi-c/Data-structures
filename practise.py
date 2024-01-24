@@ -216,7 +216,7 @@ Algorithm
 
 
 
-9.
+9.Jump game-II
 Approach-1:Greedy Algorithm 
 1.Initialize two pointers-current max reach and next max reach 
 2.iterate through the array 
