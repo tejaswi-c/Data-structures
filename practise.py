@@ -241,3 +241,21 @@ def jump(nums):
     next_max_reach=max(next_max_reach,i+nums[i])
     return jumps 
 
+
+10.H-Index
+
+We then iterate through the sorted array and for each citation count, 
+we compare it to the number of remaining elements in the array.
+def hIndex(self, citations):
+        """
+        :type citations: List[int]
+        :rtype: int
+        """
+        citations.sort(reverse=True)
+        n=len(citations)
+        h=0
+        for i in range(n):
+            if citations[i]>=i+1:
+                h=i+1
+        return h
+	
