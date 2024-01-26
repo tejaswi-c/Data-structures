@@ -285,3 +285,24 @@ class RandomizedSet(object):
     def getRandom(self):
         return random.choice(self.list)
 
+
+
+12.Product of Array Except Self 
+def productExceptSelf(self, nums):
+        n = len(nums)
+        prefix_products = [1] * n
+        suffix_products = [1] * n
+        prefix_product = 1
+        for i in range(n):
+            prefix_products[i] = prefix_product
+            prefix_product *= nums[i]
+        suffix_product = 1
+        for i in range(n - 1, -1, -1):
+            suffix_products[i] = suffix_product
+            suffix_product *= nums[i]
+        result = [prefix_products[i] * suffix_products[i] for i in range(n)]
+        return result
+# Initialize arrays to store prefix and suffix products
+# Compute prefix products
+# Compute suffix products
+# Compute the final result by multiplying prefix and suffix products
