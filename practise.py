@@ -258,4 +258,30 @@ def hIndex(self, citations):
             if citations[i]>=i+1:
                 h=i+1
         return h
-	
+
+11.Insert Delete GetRandom
+class RandomizedSet(object):
+    def __init__(self):
+        self.list=[]
+        self.set={}
+    def insert(self, val):
+        """
+        :type val: int
+        :rtype: bool
+        """
+        if val not in self.list:
+            self.list.append(val)
+            return True
+        return False
+    def remove(self, val):
+        """
+        :type val: int
+        :rtype: bool
+        """
+        if val in self.list:
+            self.list.remove(val)
+            return True
+        return False
+    def getRandom(self):
+        return random.choice(self.list)
+
