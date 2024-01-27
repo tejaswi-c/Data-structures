@@ -310,9 +310,9 @@ def productExceptSelf(self, nums):
 
 13.Candy
  def candy(self, ratings):
-        -ratings are sorted out
-        -atleast one candy 
-        -as the ratings increases allocates some more condies#formuls/logic 
+        #ratings are sorted out
+        #atleast one candy 
+        #as the ratings increases allocates some more condies#formuls/logic 
 
         n=len(ratings)
         candies=[1]*n 
@@ -325,3 +325,4 @@ def productExceptSelf(self, nums):
 
         total_candies=sum(candies)
         return total_candies
+	 
