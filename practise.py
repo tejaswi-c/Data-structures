@@ -325,4 +325,44 @@ def productExceptSelf(self, nums):
 
         total_candies=sum(candies)
         return total_candies
+
+
+14.Trapping Rain water 
+
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6 units-count the units of water
+	-measure y-axis height of each item
+
+Approach:
+	-keep track of maximum of left height for each height
+	-keep track of maximum of right height for each height
+	-traverse again
+    -find waterlevel-min(max_left[i],max_right[i])
+    -if waterlevel>heights[i] 
+        then ith bar traps waterlevel-height[i]
+
+Code:
+    def trap(heights):
+	    n=len(heights)
+	    max_left,max_right=[0]*n,[0]*n
+
+	    for i in range(1,n):
+	        max_left[i]=max(max_left[i-1],heights[i-1])
+
+	    for i in range(n-2,-1,-1):
+	        max_right[i]=max(max_right[i+1],heights[i+1])
+
+	    ans=0
+	    for i in range(0,n):
+	        water_level=min(max_left[i],max_right[i])
+	        if water_level>heights[i]:
+	            ans+=water_level-heights[i]
+	    return ans
+
+	heights=[0,1,0,2,1,0,1,3,2,1,2,1]
+	x=trap(heights)
+	print(x)
+
+Time complexity:O(n)
+Space complexity:O(n)
 	 
