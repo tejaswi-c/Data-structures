@@ -380,3 +380,23 @@ def romanToInt(self, s):
                 result -= 2 * prev_value
             prev_value = current_value
         return result
+
+
+16.Integer to Roman  
+def intToRoman(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    symbols = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+    
+    result = ""
+    
+    for i in range(len(values)):
+        while num >= values[i]:
+            result += symbols[i]
+            num -= values[i]
+    return result
+
+    108-100 8  CV111
