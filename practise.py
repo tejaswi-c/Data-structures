@@ -400,3 +400,20 @@ def intToRoman(self, num):
     return result
 
     108-100 8  CV111
+
+17.Length of last word
+def lengthOfLastWord(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        n=len(s)
+        count=0
+        for i in range(n-1,-1,-1):
+            if s[i]==' ':
+                if count==0:
+                    continue
+                else:
+                    return count
+            count+=1
+        return count
