@@ -430,3 +430,17 @@ def longestCommonPrefix(self, strs):
 			    return ""
 		return prefix  
 
+19.Find the Index of the First Occurance in a string
+def strStr(self, haystack, needle):
+        """
+        :type haystack: str
+        :type needle: str
+        :rtype: int
+        """
+        needle_len=len(needle)
+        for i in range(len(haystack)):
+            test=haystack[i:needle_len+i]
+            if test==needle:
+                return i
+        return -1
+
