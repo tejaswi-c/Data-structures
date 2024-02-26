@@ -444,3 +444,15 @@ def strStr(self, haystack, needle):
                 return i
         return -1
 
+
+20.Text Justification
+Approach 
+      #  traverse through each word
+      #  find length of each word
+      #   while length of word <maxwidth:
+      #          append next word to current string
+      #     add current string to result list
+      # return the result list
+
+
+
