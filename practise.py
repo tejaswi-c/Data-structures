@@ -450,6 +450,24 @@ Approach
       #          append next word to current string
       #     add current string to result list
       # return the result list
+      def fullJustify(self, words, maxWidth):
+	      result=[]
+	      current_string=''
+	      for word in words:
+	          if len(current_string)+len(word)<=max_width:
+	              if current_string:
+	                  current_string+=''+word 
+	              else:
+	                  current_string=word 
+	          else:
+	              result.append(current_string.ljust(max_width))
+	              current_string=word 
+	    if current_string:
+	        result.append(current_string.ljust(max_width))
+	    return result 
+	      
+
+
 
 
 
