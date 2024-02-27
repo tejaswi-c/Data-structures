@@ -468,7 +468,7 @@ Approach
 	      
 
 
-21.
+21.Palindrome
 def isPalindrome(self, s):
         """
         :type s: str
